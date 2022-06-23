@@ -13,7 +13,7 @@ import {
   u8,
   utf8String,
 } from '../../src/beet'
-import { deepLogBeet } from '../utils'
+import { deepLogBeet } from '../utils/index'
 
 function verify<Args>(
   t: test.Test,

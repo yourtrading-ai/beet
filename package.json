@@ -1,22 +1,30 @@
 {
   "scripts": {
-    "build": "(cd ./beet && yarn build) && (cd ./beet-solana && yarn build)",
-    "test:beet": "cd ./beet && yarn test && yarn test:browser",
-    "test:beet-solana": "cd ./beet-solana && yarn test",
-    "doc": "(cd ./beet && yarn doc); (cd ./beet-solana && yarn doc)",
-    "doc:update": "./sh/update-docs"
+    "build": "lerna run build",
+    "deploy": "yarn build && yarn deploy:apps",
+    "deploy:apps": "lerna run deploy:app",
+    "test:beet": "cd beet && yarn test && yarn test:browser",
+    "test:beet-solana": "cd beet-solana && yarn test"
   },
+  "description": "An adjusted version of the @metaplex-foundation/beet library.",
   "workspaces": {
     "packages": [
       "beet",
       "beet-solana"
     ]
   },
-  "author": "Metaplex Maintainers <contact@metaplex.com>",
-  "homepage": "https://metaplex.com",
+  "author": "Metaplex Maintainers <contact@metaplex.com>, YourTrading.ai GbR <contact@robotter.ai>",
+  "homepage": "https://robotter.ai",
   "repository": {
-    "url": "https://github.com/metaplex/beet.git"
+    "type": "git",
+    "url": "https://github.com/yourtrading-ai/beet.git"
   },
-  "private": true,
-  "packageManager": "yarn@3.1.1"
+  "private": false,
+  "packageManager": "yarn@3.1.1",
+  "dependencies": {
+    "lerna": "^5.1.4"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.2"
+  }
 }

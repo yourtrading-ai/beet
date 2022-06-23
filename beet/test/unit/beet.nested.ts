@@ -4,7 +4,7 @@ import { array, utf8String } from '../../src/beet'
 import { coption } from '../../src/beets/composites'
 import { i64, u32, u8 } from '../../src/beets/numbers'
 import { bignum, FixableBeet } from '../../src/types'
-import { deepLogBeet } from '../utils'
+import { deepLogBeet } from '../utils/index'
 import { strict as assert } from 'assert'
 
 function stringifyElements(arr: any[]) {

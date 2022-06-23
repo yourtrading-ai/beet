@@ -1,6 +1,6 @@
 import test from 'tape'
 import { coption, u8, utf8String } from '../../src/beet'
-import { checkFixedSerialization } from '../utils'
+import { checkFixedSerialization } from '../utils/index'
 import fixture from './fixtures/options.json'
 
 test('compat options: u8s', (t) => {

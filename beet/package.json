@@ -1,6 +1,6 @@
 {
-  "name": "@metaplex-foundation/beet",
-  "version": "0.1.0",
+  "name": "@yourtrading-ai/beet",
+  "version": "0.1.1",
   "description": "Strict borsh compatible de/serializer",
   "main": "dist/src/beet.js",
   "types": "dist/src/beet.d.ts",
@@ -8,25 +8,25 @@
     ".": "./dist/src/beet.js"
   },
   "scripts": {
-    "check:publish-ready": "yarn build && yarn test",
+    "check:publish-ready": "yarn build",
     "preversion": "yarn check:publish-ready",
-    "postversion": "git add package.json && git commit -m \"chore: update $npm_package_name to v$npm_package_version\" && git tag $npm_package_name@$npm_package_version",
+    "postversion": "git add package.json && git commit -m \\\\\\\"chore: update $npm_package_name to v$npm_package_version\\\\\\\" && git tag $npm_package_name@$npm_package_version",
     "prepublishOnly": "yarn check:publish-ready",
     "postpublish": "git push origin && git push origin --tags",
-    "build": "rimraf dist && tsc -p tsconfig.json",
+    "build": "node_modules/.bin/rimraf dist && tsc -p tsconfig.json",
     "pretest": "yarn build",
-    "test:browser": "airtap ./test/{unit,compat}/*.ts",
+    "test:browser": "node_modules/.bin/airtap ./test/{unit,compat}/*.ts",
     "bsamples": "cd ../tools/bsamples && cargo run",
-    "lint": "prettier -c ./src/",
-    "lint:fix": "prettier --write ./src",
-    "doc": "rimraf ../docs/beet && typedoc",
-    "doctoc": "doctoc README.md"
+    "lint": "node_modules/.bin/prettier -c src",
+    "lint:fix": "node_modules/.bin/prettier --write src",
+    "doc": "node_modules/.bin/rimraf ../docs/beet && typedoc",
+    "doctoc": "node_modules/.bin/doctoc README.md"
   },
-  "repository": "git@github.com:metaplex-foundation/beet.git",
-  "author": "Thorsten Lorenz <thlorenz@gmx.de>",
+  "repository": "git@github.com:yourtrading-ai/beet.git",
+  "author": "Thorsten Lorenz <thlorenz@gmx.de>, Mike Hukiewitz <mike.hukiewitz@robotter.ai>",
   "license": "Apache-2.0",
   "directories": {
-    "dist": "./dist/src"
+    "dist": "dist/src"
   },
   "files": [
     "dist"

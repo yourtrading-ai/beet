@@ -1,6 +1,6 @@
 import test from 'tape'
 import { array, u8, utf8String } from '../../src/beet'
-import { checkFixedSerialization } from '../utils'
+import { checkFixedSerialization } from '../utils/index'
 import fixture from './fixtures/vecs.json'
 
 test('compat vecs: u8s', (t) => {

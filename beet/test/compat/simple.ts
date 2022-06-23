@@ -1,7 +1,7 @@
 import BN from 'bn.js'
 import test from 'tape'
 import { u128, u8, utf8String } from '../../src/beet'
-import { checkFixedSerialization } from '../utils'
+import { checkFixedSerialization } from '../utils/index'
 import fixture from './fixtures/simple.json'
 
 test('compat simple: strings', (t) => {

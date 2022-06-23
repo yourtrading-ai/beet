@@ -4,7 +4,7 @@ import {
   checkFixedDeserialize,
   checkFixedSerialization,
   checkFixedSerialize,
-} from '../utils'
+} from '../utils/index'
 import fixture from './fixtures/enums.json'
 
 enum Directions {
