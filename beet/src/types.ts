@@ -193,7 +193,7 @@ export const BEET_TYPE_ARG_INNER = 'Beet<{innner}>'
  * the value/data they hold and needs to be _fixed_ with a value or data
  * NOTE: that if this is `false`, the struct is considered _fixed_ size which
  * means it has the same size no matter what value it holds
- * @property sourcPack the package where the definition is exported,
+ * @property sourcePack the package where the definition is exported,
  * i.e. beet or beet-solana
  * @property ts is the TypeScript type representing the deserialized type
  * @property arg specifies the type of arg to provide to create the Beet type
